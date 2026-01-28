@@ -10,117 +10,119 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Gestión de Entrenamientos</h1>
-    <div id="mensajeNotificacion" class="mensaje-notificacion oculto"></div>
+  <main>
+    <div class="container">
+      <h1>Gestión de Entrenamientos</h1>
+      <div id="mensajeNotificacion" class="mensaje-notificacion oculto"></div>
 
-    <div class="menu-principal">
-      <button class="boton-agregar" onclick="mostrarRegistro()">Añadir Persona</button>
-      <button class="boton-agregar" onclick="mostrarLogin()">Iniciar Sesión</button>
-      <button class="boton-agregar" onclick="mostrarForo()">Foro</button>
-    </div>
-
-    <!-- Formulario registro -->
-    <div id="formRegistro" class="formulario oculto">
-      <h2>Registro de Usuario</h2>
-      <input type="text" id="nombreCompleto" class="entrada-nota" placeholder="Nombre completo" required>
-      <input type="email" id="correo" class="entrada-nota" placeholder="Correo electrónico" required>
-      <input type="number" id="altura" class="entrada-nota" placeholder="Altura en cm" required>
-      <input type="number" id="peso" class="entrada-nota" placeholder="Peso en kg" required>
-      <input type="number" id="edad" class="entrada-nota" placeholder="Edad" required>
-      <input type="text" id="usuario" class="entrada-nota" placeholder="Usuario" required>
-      <input type="password" id="contrasena" class="entrada-nota" placeholder="Contraseña" required>
-
-      <button class="boton-agregar" onclick="registrarPersona()">Registrarse</button>
-      <button class="boton-eliminar" onclick="volverInicio()">Volver</button>
-    </div>
-
-    <!-- Formulario login -->
-    <div id="formLogin" class="formulario oculto">
-      <h2>Iniciar Sesión</h2>
-      <input type="text" id="loginUsuario" class="entrada-nota" placeholder="Usuario" required>
-      <input type="password" id="loginContrasena" class="entrada-nota" placeholder="Contraseña" required>
-      <button class="boton-agregar" onclick="iniciarSesion()">Entrar</button>
-      <button class="boton-eliminar" onclick="volverInicio()">Volver</button>
-    </div>
-
-    <!-- Menú Usuario autenticado -->
-    <div id="menuUsuario" class="oculto">
-      <h2 id="bienvenida"></h2>
-      <button class="boton-agregar" onclick="mostrarAgregarEntrenamiento()">Añadir Entrenamiento</button>
-      <button class="boton-agregar" onclick="mostrarEntrenamientos()">Mostrar Entrenamientos</button>
-      <button class="boton-agregar" onclick="mostrarMejorEntrenamiento()">Mejor Entrenamiento</button>
-      <button class="boton-agregar" onclick="mostrarResumen()">Resumen de Entrenamientos</button>
-      <button class="boton-agregar" onclick="mostrarEliminarEntrenamientos()">Eliminar Entrenamientos</button>
-      <button class="boton-agregar" onclick="mostrarForo()">Foro</button>
-      <button class="boton-eliminar" onclick="cerrarSesion()">Cerrar Sesión</button>
-    </div>
-
-    <!-- Añadir entrenamiento -->
-    <div id="formEntrenamiento" class="formulario oculto">
-      <h2>Añadir Entrenamiento</h2>
-      <input type="number" id="distancia" class="entrada-nota" placeholder="Distancia en metros" required>
-      <input type="number" id="tiempo" class="entrada-nota" placeholder="Tiempo en minutos" required>
-
-      <button class="boton-agregar" onclick="agregarEntrenamiento()">Guardar Entrenamiento</button>
-      <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
-    </div>
-
-    <!-- Mostrar entrenamientos -->
-    <div id="listaEntrenamientos" class="oculto">
-      <h2>Mis Entrenamientos</h2>
-      <ul id="entrenamientosLista" class="lista-notas"></ul>
-      <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
-    </div>
-
-    <!-- Mejor entrenamiento -->
-    <div id="mejorEntrenamiento" class="oculto">
-      <h2>Mejor Entrenamiento</h2>
-      <button class="boton-agregar" onclick="mostrarMejorTiempo()">Mejor Tiempo</button>
-      <button class="boton-agregar" onclick="mostrarMejorDistancia()">Mejor Distancia</button>
-      <button class="boton-agregar" onclick="mostrarMejorVelocidad()">Mejor Velocidad</button>
-
-      <div id="resultadoMejor" class="nota oculto"></div>
-      <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
-    </div>
-
-    <!-- Resumen -->
-    <div id="resumenEntrenamientos" class="oculto">
-      <h2>Resumen de Entrenamientos</h2>
-      <div id="resumenContenido" class="nota"></div>
-      <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
-    </div>
-
-    <!-- Eliminar entrenamientos -->
-    <div id="eliminarEntrenamientos" class="oculto">
-      <h2>Eliminar Entrenamientos</h2>
-      <ul id="listaEliminar" class="lista-notas"></ul>
-      <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
-    </div>
-
-    <!-- Foro -->
-    <div id="foro" class="oculto">
-      <h2>Foro Público</h2>
-      <div class="formulario">
-        <textarea id="comentarioForo" class="entrada-nota" placeholder="Escribe tu comentario..." rows="3"></textarea>
-        <button class="boton-agregar" onclick="agregarComentarioForo()">Publicar</button>
+      <div class="menu-principal">
+        <button class="boton-agregar" onclick="mostrarRegistro()">Añadir Persona</button>
+        <button class="boton-agregar" onclick="mostrarLogin()">Iniciar Sesión</button>
+        <button class="boton-agregar" onclick="mostrarForo()">Foro</button>
       </div>
 
-      <ul id="listaComentarios" class="lista-notas"></ul>
-      <button class="boton-eliminar" onclick="volverMenuActual()">Volver</button>
-    </div>
+      <!-- Formulario registro -->
+      <div id="formRegistro" class="formulario oculto">
+        <h2>Registro de Usuario</h2>
+        <input type="text" id="nombreCompleto" class="entrada-nota" placeholder="Nombre completo" required>
+        <input type="email" id="correo" class="entrada-nota" placeholder="Correo electrónico" required>
+        <input type="number" id="altura" class="entrada-nota" placeholder="Altura en cm" required>
+        <input type="number" id="peso" class="entrada-nota" placeholder="Peso en kg" required>
+        <input type="number" id="edad" class="entrada-nota" placeholder="Edad" required>
+        <input type="text" id="usuario" class="entrada-nota" placeholder="Usuario" required>
+        <input type="password" id="contrasena" class="entrada-nota" placeholder="Contraseña" required>
 
-    <!-- Modal de confirm -->
-    <div id="modalConfirmacion" class="modal oculto">
-      <div class="modal-contenido">
-        <p id="mensajeModal"></p>
-        <div class="modal-botones">
-          <button class="boton-agregar" id="btnConfirmar">Confirmar</button>
-          <button class="boton-eliminar" id="btnCancelar">Cancelar</button>
+        <button class="boton-agregar" onclick="registrarPersona()">Registrarse</button>
+        <button class="boton-eliminar" onclick="volverInicio()">Volver</button>
+      </div>
+
+      <!-- Formulario login -->
+      <div id="formLogin" class="formulario oculto">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="loginUsuario" class="entrada-nota" placeholder="Usuario" required>
+        <input type="password" id="loginContrasena" class="entrada-nota" placeholder="Contraseña" required>
+        <button class="boton-agregar" onclick="iniciarSesion()">Entrar</button>
+        <button class="boton-eliminar" onclick="volverInicio()">Volver</button>
+      </div>
+
+      <!-- Menú Usuario autenticado -->
+      <div id="menuUsuario" class="oculto">
+        <h2 id="bienvenida"></h2>
+        <button class="boton-agregar" onclick="mostrarAgregarEntrenamiento()">Añadir Entrenamiento</button>
+        <button class="boton-agregar" onclick="mostrarEntrenamientos()">Mostrar Entrenamientos</button>
+        <button class="boton-agregar" onclick="mostrarMejorEntrenamiento()">Mejor Entrenamiento</button>
+        <button class="boton-agregar" onclick="mostrarResumen()">Resumen de Entrenamientos</button>
+        <button class="boton-agregar" onclick="mostrarEliminarEntrenamientos()">Eliminar Entrenamientos</button>
+        <button class="boton-agregar" onclick="mostrarForo()">Foro</button>
+        <button class="boton-eliminar" onclick="cerrarSesion()">Cerrar Sesión</button>
+      </div>
+
+      <!-- Añadir entrenamiento -->
+      <div id="formEntrenamiento" class="formulario oculto">
+        <h2>Añadir Entrenamiento</h2>
+        <input type="number" id="distancia" class="entrada-nota" placeholder="Distancia en metros" required>
+        <input type="number" id="tiempo" class="entrada-nota" placeholder="Tiempo en minutos" required>
+
+        <button class="boton-agregar" onclick="agregarEntrenamiento()">Guardar Entrenamiento</button>
+        <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
+      </div>
+
+      <!-- Mostrar entrenamientos -->
+      <div id="listaEntrenamientos" class="oculto">
+        <h2>Mis Entrenamientos</h2>
+        <ul id="entrenamientosLista" class="lista-notas"></ul>
+        <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
+      </div>
+
+      <!-- Mejor entrenamiento -->
+      <div id="mejorEntrenamiento" class="oculto">
+        <h2>Mejor Entrenamiento</h2>
+        <button class="boton-agregar" onclick="mostrarMejorTiempo()">Mejor Tiempo</button>
+        <button class="boton-agregar" onclick="mostrarMejorDistancia()">Mejor Distancia</button>
+        <button class="boton-agregar" onclick="mostrarMejorVelocidad()">Mejor Velocidad</button>
+
+        <div id="resultadoMejor" class="nota oculto"></div>
+        <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
+      </div>
+
+      <!-- Resumen -->
+      <div id="resumenEntrenamientos" class="oculto">
+        <h2>Resumen de Entrenamientos</h2>
+        <div id="resumenContenido" class="nota"></div>
+        <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
+      </div>
+
+      <!-- Eliminar entrenamientos -->
+      <div id="eliminarEntrenamientos" class="oculto">
+        <h2>Eliminar Entrenamientos</h2>
+        <ul id="listaEliminar" class="lista-notas"></ul>
+        <button class="boton-eliminar" onclick="volverMenuUsuario()">Volver</button>
+      </div>
+
+      <!-- Foro -->
+      <div id="foro" class="oculto">
+        <h2>Foro Público</h2>
+        <div class="formulario">
+          <textarea id="comentarioForo" class="entrada-nota" placeholder="Escribe tu comentario..." rows="3"></textarea>
+          <button class="boton-agregar" onclick="agregarComentarioForo()">Publicar</button>
+        </div>
+
+        <ul id="listaComentarios" class="lista-notas"></ul>
+        <button class="boton-eliminar" onclick="volverMenuActual()">Volver</button>
+      </div>
+
+      <!-- Modal de confirm -->
+      <div id="modalConfirmacion" class="modal oculto">
+        <div class="modal-contenido">
+          <p id="mensajeModal"></p>
+          <div class="modal-botones">
+            <button class="boton-agregar" id="btnConfirmar">Confirmar</button>
+            <button class="boton-eliminar" id="btnCancelar">Cancelar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <script src="clases.js"></script>
   <script src="script.js"></script>
