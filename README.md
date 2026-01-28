@@ -6,6 +6,10 @@ Aplicación web para el registro y seguimiento de entrenamientos deportivos indi
 
 Sistema de gestión de entrenamientos que permite a los usuarios registrarse, iniciar sesión y llevar un control detallado de sus actividades deportivas. La aplicación incluye funcionalidades de registro de entrenamientos, análisis de rendimiento y un foro público para compartir comentarios.
 
+## Puedes visualizarlo
+
+https://romeoelena.github.io/gestion-entrenamientos/
+
 ## Tecnologías Utilizadas
 
 - HTML5
@@ -159,5 +163,4 @@ No requiere instalación de dependencias ni servidor web.
 
 ## Trabajo realizado por:
 
-Elena Bragado Romeo
-Proyecto para el módulo de Desarrollo Web en Entorno Cliente.
+Elena Bragado Romeo_Proyecto para el módulo de Desarrollo Web en Entorno Cliente.
