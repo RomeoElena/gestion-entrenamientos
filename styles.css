@@ -330,4 +330,11 @@ textarea.entrada-nota {
   .modal-contenido {
     margin: 20px;
   }
+
+  .boton-eliminar,
+  .boton-agregar {
+    font-size: 18px !important;
+    padding: 15px !important;
+    min-height: 48px;
+  }
 }
