@@ -270,13 +270,13 @@ const validarRegistro = (datos) => {
 //Registramos una nueva persona en el sistema
 const registrarPersona = () => {
   const datos = {
-    nombreCompleto: document.getElementById("nombreCompleto").value,
-    correo: document.getElementById("correo").value,
+    nombreCompleto: document.getElementById("nombreCompleto").value.trim(),
+    correo: document.getElementById("correo").value.trim(),
     altura: parseFloat(document.getElementById("altura").value),
     peso: parseFloat(document.getElementById("peso").value),
     edad: parseInt(document.getElementById("edad").value),
-    usuario: document.getElementById("usuario").value,
-    contrasena: document.getElementById("contrasena").value,
+    usuario: document.getElementById("usuario").value.trim(),
+    contrasena: document.getElementById("contrasena").value.trim(),
   };
 
   if (!validarRegistro(datos)) return;
@@ -302,8 +302,8 @@ const registrarPersona = () => {
 
 //Inciamos sesion de usuario
 const iniciarSesion = () => {
-  const usuario = document.getElementById("loginUsuario").value;
-  const contrasena = document.getElementById("loginContrasena").value;
+  const usuario = document.getElementById("loginUsuario").value.trim();
+  const contrasena = document.getElementById("loginContrasena").value.trim();
 
   const persona = personas.find(
     (p) => p.usuario === usuario && p.contrasena === contrasena,
